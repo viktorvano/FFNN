@@ -19,7 +19,7 @@ input layer: 4,\
 hidden layer: 9,\
 hidden layer: 8,\
 hidden layer: 7,\
-output layer: 2,\
+output layer: 2,
 
 # Training data:
 	Inputs			Outputs	
