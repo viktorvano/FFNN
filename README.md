@@ -22,7 +22,7 @@ hidden layer: 7,
 output layer: 2,
 
 # Training data:
-	Inputs						Outputs	
+	Inputs			Outputs	
 	{ 0.0, 0.0, 0.0, 0.0 },	{ 0.0f, 1.0f },
 	{ 0.0, 0.0, 0.0, 1.0 },	{ 0.0f, 0.0f },
 	{ 0.0, 0.0, 1.0, 0.0 },	{ 0.0f, 0.0f },
