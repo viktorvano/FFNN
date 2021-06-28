@@ -1,7 +1,6 @@
 package FFNN;
 
-import java.util.Arrays;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 import static FFNN.Variables.*;
@@ -21,9 +20,9 @@ public class FFNN {
 
         NeuralNetwork myNet = new NeuralNetwork(topology);
 
-        input = new LinkedList<>();
-        target = new LinkedList<>();
-        result = new LinkedList<>();
+        input = new ArrayList<>();
+        target = new ArrayList<>();
+        result = new ArrayList<>();
         input.clear();
         target.clear();
         result.clear();
@@ -46,7 +45,7 @@ public class FFNN {
                 // Train the net what the outputs should have been:
                 trainData.getTargetOutputs(target);
                 showVectorValues("Targets: ", target);
-                assert(target.size() == topology.peekLast());
+                assert(target.size() == topology.get(topology.size()-1));
                 myNet.backProp(target);//This function alters neurons
 
                 // Collect the net's actual results:
@@ -84,7 +83,7 @@ public class FFNN {
             input.clear();
             for(int i = 0; i < inputNodes; i++)
             {
-                input.add((double)(Math.round(Math.random())));
+                input.add((float)(Math.round(Math.random())));
             }
             showVectorValues("Inputs:", input);
             myNet.feedForward(input);
